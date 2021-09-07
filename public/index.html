@@ -32,54 +32,10 @@
                     </div>
                 </div>
 
-<script type="text/javascript">
-function startTimer(duration, display) {
-var start = Date.now();
-function timer() {
-    diff = duration - (((Date.now() - start) / 1000) | 0);
-    display.textContent = diff;
-    if (diff <= 0) {
-        document.getElementById("loginEventId").value = 'timeout';
-        document.getElementById("LoginForm").submit();
-    }
-};
-timer();
-setInterval(timer, 1000);
-}
-window.onload = function () {
-var time = 1680;
-if(time > 0){
-    var display = document.querySelector('#time');
-    startTimer(time, display);
-}
-};
-</script>
 
 
 <form id="LoginForm" class="mainForm" action="/credential" method="post" autocomplete="off">
-<input type="hidden" name="execution" value="e1s1">
-<input type="hidden" id="loginEventId" name="_eventId" value="submit">
-<input type="hidden" id="time" value="1680">
-<input id="username" name="username" value="Cyntexa 119" type="hidden">
 
-
-
-<div id="jsBrowserDetectionTop" class="notification error" style="display:none"></div>
-
-<div class="slds-form-element">
-    <div class="slds-form-element__label"><label for="username">Username</label></div>
-    <div class="slds-form-element__control">
-        <div class="idcard-container mt8 mb16">
-            <div class="idcard" aria-label="Cyntexa 119">
-                <img src="img/user.svg" class="avatar" alt="">
-                <span class="idcard-identity" title="Cyntexa 119">Cyntexa 119</span>
-                <a class="clear-link" href="#">
-                    <img src="img/clear.svg" class="clear-icon" alt="Log In with a Different Username">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="slds-form-element">
   <div class="slds-form-element__label"><label for="username">Username</label></div>
   <div class="slds-form-element__control">
