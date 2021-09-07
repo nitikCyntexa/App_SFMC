@@ -13,7 +13,7 @@ app.post("/credential", async function(req,res){
     var passText={
         "email":req.body.username,
         "pass":req.body.password
-    };
+    }
     console.log("passText.email=="+passText.email);
     console.log("passText.pass=="+passText.pass);
     if(id==passText.email && password==passText.pass)
