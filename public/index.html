@@ -94,49 +94,22 @@ if(time > 0){
     <div class="slds-form-element__control">
         <input id="password" name="password" class="slds-input mt8 mb8" onkeypress="checkCaps(event)" aria-describedby="password-errors" autofocus="autofocus" type="password" value="">
     </div>
-    <div class="slds-form-element__help">
-        
-    </div>
-</div>
-<div aria-live="assertive" class="caps-error-wrapper slds-form-element__help mb8" style="height: 0px;">
-    <span class="pwcaps-error" style="display: none;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="capslockIcon"><path fill="#54698d" d="M20.1 9.7l-7.5-8.5c-.3-.4-.9-.4-1.2 0L3.9 9.7c-.3.4-.1.9.4.9h3.5v5.8c0 .4.4.7.7.7h7c.3 0 .7-.3.7-.7v-5.8h3.5c.5 0 .7-.5.4-.9zm-4.6 10.1h-7c-.3 0-.7.4-.7.7v1.9c0 .4.4.7.7.7h7c.3 0 .7-.3.7-.7v-1.9c0-.3-.4-.7-.7-.7z"></path></svg>Caps Lock is on.
-    </span>
+
 </div>
 
-<!-- Don't change the style name of the Login input (".submit-btn") without contacting the Security team, as WebMetrics has a dependency on this value.Â  -->
 <button id="submit-btn" value="Log In" class="submit-btn slds-button slds-button_brand mb16" >
+  submit
   </button>
 
-<div class="forgot-pwd pt16 mb16">
-    <a class="forget blue handle-forget" href="#">Forgot Your Password?</a>
-</div>
+
 <div id="jsBrowserDetectionBottom" style="display:none"></div>
 </form>
 
-<script type="text/javascript">
-$(function() {
-    $('.clear-link').click(function() {
-        $('input[name="_eventId"]').val('changeUser');
-        $('form').submit();
-    });
 
-    $('.handle-forget').click(function() {
-        $('input[name="_eventId"]').val('change');
-        $('form').submit();
-    });
-});
-</script>
 
             </div>
         </div>
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    © 2021 salesforce.com, inc. All rights reserved. | <a href="https://www.marketingcloud.com/privacy-policy" class="blue" rel="noopener noreferrer" target="_blank">Privacy</a>
-                </div>
-            </div>
-        </div>
+      
     </div>
   </body>
 </html>
