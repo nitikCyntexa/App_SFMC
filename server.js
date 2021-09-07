@@ -10,11 +10,12 @@ var password="";
 app.use(express.static(__dirname + '/public'));
 app.post("/credential", async function(req,res){
     var passText={
-        "email":req.body.emailInputId,
-        "pass":req.body.passInputId
+        "email":req.body.username,
+        "pass":req.body.password
     };
-
-    if("staticEmail"==passText.email && "staticPass"==passText.pass)
+    console.log("passText.email=="+passText.email);
+    console.log("passText.pass=="+passText.pass);
+    if(id==passText.email && password==passText.pass)
     {
         console.log("Success");
     }
