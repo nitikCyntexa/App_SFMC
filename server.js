@@ -1,4 +1,6 @@
 var express = require('express');
+
+var bodyParser = require('body-parser')
 var app = express();
 var port = process.env.PORT || 8080;
 var client_id="";
@@ -8,9 +10,12 @@ var id=" ";
 var password="";
 // Serve static files
 app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.json())
 app.post("/credential", async function(req,res){
     console.log(req);
     console.log(req.body);
+    
     var passText={
         "email":req.body.username,
         "pass":req.body.password
