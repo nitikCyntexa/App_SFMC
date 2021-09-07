@@ -9,7 +9,8 @@ var password="";
 // Serve static files
 app.use(express.static(__dirname + '/public'));
 app.post("/credential", async function(req,res){
-    console.log("req=="+req);
+    console.log(req);
+    console.log(req.body);
     var passText={
         "email":req.body.username,
         "pass":req.body.password
