@@ -12,7 +12,7 @@ var password="";
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json())
-app.post("/credential", async function(req,res){
+/*app.post("/credential", async function(req,res){
     console.log(req);
     console.log(req.body);
     
@@ -30,6 +30,15 @@ app.post("/credential", async function(req,res){
     {
        console.log("Failed"); 
     }
+});*/
+app.post("/credential", async function (req, res) {
+    var AuthRequest = {
+     "ClientId" : req.body.clientid,
+     "ClientSecret" : req.body.clientsecret,
+     "ClinentAuthURL" : req.body.authurl
+    }
+    console.log("AuthRequest.ClientId=="+AuthRequest.ClientId);
+    console.log("AuthRequest.ClientSecret=="+AuthRequest.ClientSecretS);
 });
 // Serve your app
 console.log('Served: http://localhost:' + port);
