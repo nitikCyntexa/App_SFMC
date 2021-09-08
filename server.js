@@ -32,7 +32,7 @@ app.use(bodyParser.json())
     }
 });*/
 app.post("/credential", async function (req, res) {
-    var passText={
+     var passText={
         "email":req.body.username,
         "pass":req.body.password
     }
