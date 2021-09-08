@@ -32,13 +32,12 @@ app.use(bodyParser.json())
     }
 });*/
 app.post("/credential", async function (req, res) {
-    var AuthRequest = {
-     "ClientId" : req.body.clientid,
-     "ClientSecret" : req.body.clientsecret,
-     "ClinentAuthURL" : req.body.authurl
+    var passText={
+        "email":req.body.username,
+        "pass":req.body.password
     }
-    console.log("AuthRequest.ClientId=="+AuthRequest.ClientId);
-    console.log("AuthRequest.ClientSecret=="+AuthRequest.ClientSecretS);
+    console.log("passText.email=="+passText.email);
+    console.log("passText.pass=="+passText.pass);
 });
 // Serve your app
 console.log('Served: http://localhost:' + port);
