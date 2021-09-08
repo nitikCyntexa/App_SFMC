@@ -3,9 +3,9 @@ var express = require('express');
 var bodyParser = require('body-parser')
 var app = express();
 var port = process.env.PORT || 8080;
-var client_id="";
-var client_secret="";
-var client_credentials="";
+var client_id="vg7nf3qu6zj4l7wu1knom933";
+var client_secret="CZSk4KCDDhWskx2kS2bXiqIF";
+var client_credentials="https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/";
 var id=" ";
 var password="";
 // Serve static files
@@ -38,6 +38,14 @@ app.post("/credential", async function (req, res) {
     }
     console.log("passText.email=="+passText.email);
     console.log("passText.pass=="+passText.pass);
+    if(id==passText.email && password==passText.pass)
+    {
+        console.log("Success");
+    }
+    else
+    {
+       console.log("Failed"); 
+    }
 });
 // Serve your app
 console.log('Served: http://localhost:' + port);
