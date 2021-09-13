@@ -73,7 +73,7 @@ app.post("/DEListFetch", async function (req, res) {
        },
        body: JSON.stringify({
          "grant_type": "authorization_code",
-         "code": req.body.code,
+         "code": req.body.codeData.code,
          "client_id": "4b3a1hyqartrnbu0fjw4c7y1",
          "client_secret": "zRWL2uqxxIsRA9BWU6zdcPes",
          "redirect_uri": "https://sfmc-slack-app.herokuapp.com/",
