@@ -47,7 +47,7 @@
 			console.log("Value is:" + pair[1]);
 			authCode = pair[1];
 		}
-
+		console.log("khusbooo ")
 		var settings = {
 			"url": "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token",
 			"method": "POST",
@@ -64,10 +64,11 @@
 				"scope": "email_read email_write email_send"
 			}),
 		};
-
+		
 		$.ajax(settings).done(function (response) {
 			console.log(response);
 		});
+		console.log("khusbooo 2 ")
 	}
 </script>
 
