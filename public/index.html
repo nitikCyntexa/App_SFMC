@@ -65,28 +65,19 @@
 			authCode = pair[1];
 		}
 		document.getElementById("urlButton").value = authCode;
-		var data = JSON.stringify({
-			"grant_type": "authorization_code",
-			"code": authCode,
-			"client_id": "4b3a1hyqartrnbu0fjw4c7y1",
-			"client_secret": "zRWL2uqxxIsRA9BWU6zdcPes",
-			"redirect_uri": "https://sfmc-slack-app.herokuapp.com/",
-			"scope": "email_read email_write email_send"
-		});
-
-		var xhr = new XMLHttpRequest();
-		xhr.withCredentials = true;
-
-		xhr.addEventListener("readystatechange", function () {
-			if (this.readyState === 4) {
-				console.log(this.responseText);
-			}
-		});
-
-		xhr.open("POST", "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token");
-		xhr.setRequestHeader("Content-Type", "application/json");
-
-		xhr.send(data);
+		var code = {"code":authCode,"clientId":"4b3a1hyqartrnbu0fjw4c7y1","clientSecret":"zRWL2uqxxIsRA9BWU6zdcPes","authUrl":"https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com"};
+		$.ajax({
+            url: '/DEListFetch',
+            data: code,
+            type: "POST",
+            headers: {
+                'Content-type': "application/json"
+            },
+            success: function(data) {
+               console.log(data);
+               
+            }
+        });
 	}
 </script>
 

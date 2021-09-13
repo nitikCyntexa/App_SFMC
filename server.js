@@ -56,9 +56,35 @@ request(options, function (error, response) {
 });
 
 
-app.post("/credential", async function (req, res) {
-     console.log('MYDATA CODE '+req.body.urlButton);
-    
+
+
+
+
+
+app.post("/DEListFetch", async function (req, res) {
+     console.log('MYDATA CODE '+req.body.code);
+     var request = require('request');
+     var options = {
+       'method': 'POST',
+       'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
+       'headers': {
+         'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({
+         "grant_type": "authorization_code",
+         "code": req.body.code,
+         "client_id": "4b3a1hyqartrnbu0fjw4c7y1",
+         "client_secret": "zRWL2uqxxIsRA9BWU6zdcPes",
+         "redirect_uri": "https://sfmc-slack-app.herokuapp.com/",
+         "scope": "email_read email_write email_send"
+       })
+     
+     };
+     request(options, function (error, response) {
+       if (error) throw new Error(error);
+       console.log(response.body);
+       res.send(response.body);
+     });
 
 });
 // Serve your app
