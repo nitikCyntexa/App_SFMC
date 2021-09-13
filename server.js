@@ -59,13 +59,13 @@ request(options, function (error, response) {
 app.post("/validatequery", async (reqCall, resCall) => {
     
    // var NewDEFieldsList = reqCall.body.code;
-    var dynamicQuery = reqCall.body.clientId;
-    var actionType = reqCall.body.clientSecret;
-    var url = reqCall.body.authUrl;
+    var dynamicQuery = reqCall.body;
+    //var actionType = reqCall.body.clientSecret;
+   // var url = reqCall.body.authUrl;
     //console.log('one '+NewDEFieldsList);
     console.log('one 12 '+dynamicQuery);
-    console.log('one 1234'+actionType);
-    console.log('one 1344545'+url);
+    //console.log('one 1234'+actionType);
+    //console.log('one 1344545'+url);
 });
 
 
