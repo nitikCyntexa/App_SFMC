@@ -62,7 +62,7 @@ request(options, function (error, response) {
 
 
 app.post("/DEListFetch", async function (req, res) {
- console.log(req.body);
+ console.log(req);
    // console.log('hello 2 '+JSON.stringify(req.body));
     console.log('MYDATA CODE '+req.body);
     /* var options = {
