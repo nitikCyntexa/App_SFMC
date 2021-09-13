@@ -62,8 +62,8 @@ request(options, function (error, response) {
 
 
 app.post("/DEListFetch", async function (req, res) {
-//    console.log('12 '+JSON.stringify(req));
-    console.log('hello 2 '+JSON.stringify(req.body));
+ console.log('12 '+req);
+   // console.log('hello 2 '+JSON.stringify(req.body));
     // console.log('MYDATA CODE '+req.body.codeData);
     /* var options = {
        'method': 'POST',
