@@ -64,7 +64,6 @@ request(options, function (error, response) {
 app.post("/DEListFetch", async  (req, res) => {
     console.log(req);
     console.log('hellooooooo 11');
-    console.log(res);
     console.log(req.body);
     console.log('hellooooooo 22');
  console.log(req.body["code"]);
