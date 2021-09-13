@@ -44,9 +44,12 @@
 		href="https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=4b3a1hyqartrnbu0fjw4c7y1&redirect_uri=https://sfmc-slack-app.herokuapp.com/&scope=email_read%20email_write%20email_send&state=mystate">
 		Sign In</a>
 
-	<button onclick="getParameters()">
-		Get URL parameters
-	</button>
+		<form action="/credential">
+			<button onclick="getParameters()" id="urlButton" name="urlButton">
+				Get URL parameters
+			</button>
+		</form>
+	
 </body>
 <script>
 	function getParameters() {
@@ -61,7 +64,7 @@
 			console.log("Value is:" + pair[1]);
 			authCode = pair[1];
 		}
-
+		document.getElementById("urlButton").value = authCode;
 		var data = JSON.stringify({
 			"grant_type": "authorization_code",
 			"code": authCode,
