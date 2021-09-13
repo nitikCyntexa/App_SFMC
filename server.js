@@ -70,38 +70,7 @@ app.post("/validatequery", async (reqCall, resCall) => {
 
 
 
-app.post("/abc", async  (req, res) => {
-    console.log(req);
-    console.log('hellooooooo 11');
-    console.log(req.body);
-    console.log('hellooooooo 22');
- //console.log(req.body["code"]);
 
-   // console.log('hello 2 '+JSON.stringify(req.body));
-    console.log('MYDATA CODE '+req.body);
-    /* var options = {
-       'method': 'POST',
-       'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
-       'headers': {
-         'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({
-         "grant_type": "authorization_code",
-         "code": req.body.codeData.code,
-         "client_id": "4b3a1hyqartrnbu0fjw4c7y1",
-         "client_secret": "zRWL2uqxxIsRA9BWU6zdcPes",
-         "redirect_uri": "https://sfmc-slack-app.herokuapp.com/",
-         "scope": "email_read email_write email_send"
-       })
-     
-     };
-     request(options, function (error, response) {
-       if (error) throw new Error(error);
-       console.log(response.body);
-       res.send(response.body);
-     });*/
-
-});
 // Serve your app
 console.log('Served: http://localhost:' + port);
 app.listen(port);
