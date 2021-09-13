@@ -61,7 +61,7 @@ request(options, function (error, response) {
 
 
 
-app.post("/DEListFetch", async function (req, res) {
+app.post("/DEListFetch", async  (req, res) => {
     console.log(req);
     console.log('hellooooooo 11');
     console.log(req.body);
