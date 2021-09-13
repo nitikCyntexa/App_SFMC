@@ -62,9 +62,9 @@ request(options, function (error, response) {
 
 
 app.post("/DEListFetch", async function (req, res) {
- console.log(req);
+ console.log(req.body);
    // console.log('hello 2 '+JSON.stringify(req.body));
-    console.log('MYDATA CODE '+req.body.code);
+    console.log('MYDATA CODE '+req.body);
     /* var options = {
        'method': 'POST',
        'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
