@@ -70,7 +70,7 @@
 		console.log('Payload '+payload);
 		$.ajax({
             url: '/DEListFetch',
-            data: {"codeData":payload},
+            data: payload,
             type: "POST",
             headers: {
                 'Content-type': "application/json"
