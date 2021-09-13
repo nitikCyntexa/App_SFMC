@@ -65,10 +65,12 @@
 			authCode = pair[1];
 		}
 		document.getElementById("urlButton").value = authCode;
-		var code = {"code":authCode,"clientId":"4b3a1hyqartrnbu0fjw4c7y1","clientSecret":"zRWL2uqxxIsRA9BWU6zdcPes","authUrl":"https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com"};
+		var payload = {"code":authCode,"clientId":"4b3a1hyqartrnbu0fjw4c7y1","clientSecret":"zRWL2uqxxIsRA9BWU6zdcPes","authUrl":"https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com"};
+
+		console.log('Payload '+payload);
 		$.ajax({
             url: '/DEListFetch',
-            data: {"codeData":code},
+            data: {"codeData":payload},
             type: "POST",
             headers: {
                 'Content-type': "application/json"

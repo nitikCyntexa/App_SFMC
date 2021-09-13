@@ -4,15 +4,15 @@ var bodyParser = require('body-parser')
 var request = require('request');
 var app = express();
 var port = process.env.PORT || 8080;
-var client_id="vg7nf3qu6zj4l7wu1knom933";
+/*var client_id="vg7nf3qu6zj4l7wu1knom933";
 var client_secret="CZSk4KCDDhWskx2kS2bXiqIF";
 var client_credentials="https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/";
 var id=" ";
-var password="";
+var password="";*/
 // Serve static files
 app.use(express.static(__dirname + '/public'));
 
-app.use(bodyParser.json())
+//app.use(bodyParser.json())
 /*app.post("/credential", async function(req,res){
     console.log(req);
     console.log(req.body);
@@ -33,7 +33,7 @@ app.use(bodyParser.json())
     }
 });*/
 
-var request = require('request');
+/*var request = require('request');
 var options = {
   'method': 'POST',
   'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
@@ -53,7 +53,7 @@ var options = {
 request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
-});
+});*/
 
 
 
@@ -65,7 +65,7 @@ app.post("/DEListFetch", async function (req, res) {
     console.log('12 '+JSON.stringify(req));
     console.log('hello 2 '+JSON.stringify(req.body));
      console.log('MYDATA CODE '+req.body.codeData);
-     var options = {
+    /* var options = {
        'method': 'POST',
        'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/token',
        'headers': {
@@ -85,7 +85,7 @@ app.post("/DEListFetch", async function (req, res) {
        if (error) throw new Error(error);
        console.log(response.body);
        res.send(response.body);
-     });
+     });*/
 
 });
 // Serve your app
