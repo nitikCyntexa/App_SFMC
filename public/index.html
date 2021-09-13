@@ -71,6 +71,7 @@
 
 		$.ajax({
             url: '/DEListFetch',
+			type: "POST",
 			dataType:"JSON",
             data:{
 				'code':authCode,
@@ -78,10 +79,6 @@
 				'clientSecret':'zRWL2uqxxIsRA9BWU6zdcPes',
 				'authUrl':'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com'
 			},
-            type: "POST",
-            headers: {
-                'Content-type': "application/json"
-            },
             success: function(data) {
                console.log(data);
                
