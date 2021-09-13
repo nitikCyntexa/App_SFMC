@@ -66,7 +66,7 @@ app.post("/DEListFetch", async  (req, res) => {
     console.log('hellooooooo 11');
     console.log(req.body);
     console.log('hellooooooo 22');
- console.log(req.body["code"]);
+ //console.log(req.body["code"]);
 
    // console.log('hello 2 '+JSON.stringify(req.body));
     console.log('MYDATA CODE '+req.body);
